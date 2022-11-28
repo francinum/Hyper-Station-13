@@ -2555,7 +2555,7 @@
 	},
 /obj/machinery/door/airlock/maintenance{
 	dir = 8;
-	name = "Art Atrium Maintenance;
+	name = "Art Atrium Maintenance";
 	req_access_txt = "12"
 	},
 /turf/open/floor/plasteel/dark{
@@ -7196,6 +7196,21 @@
 	icon_state = "darkfull_whole_alt"
 	},
 /area/layenia/cave)
+"aRT" = (
+/obj/effect/turf_decal/tile/brown{
+	dir = 6
+	},
+/obj/effect/turf_decal/loading_area{
+	icon_state = "drain";
+	name = "drain"
+	},
+/obj/machinery/firealarm{
+	pixel_y = -28
+	},
+/turf/open/floor/plasteel{
+	icon_state = "floor_plate"
+	},
+/area/hallway/primary/aft/upper)
 "aRV" = (
 /obj/machinery/atmospherics/pipe/simple/general/visible{
 	dir = 5
@@ -10420,6 +10435,7 @@
 	pixel_x = -3;
 	pixel_y = 7
 	},
+/obj/item/stamp/hos,
 /turf/open/floor/carpet/red,
 /area/crew_quarters/heads/hos)
 "bsL" = (
@@ -15550,6 +15566,7 @@
 /obj/effect/turf_decal/tile/green{
 	dir = 4
 	},
+/obj/effect/landmark/start/virologist,
 /turf/open/floor/plasteel/white/side{
 	dir = 10
 	},
@@ -16094,8 +16111,8 @@
 	pixel_y = 14
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/item/toy/figure{
-	pixel_x = 4;
+/obj/item/toy/nuke{
+	pixel_x = 3;
 	pixel_y = 4
 	},
 /turf/open/floor/plating{
@@ -21661,6 +21678,7 @@
 /turf/open/floor/plasteel/dark,
 /area/security/prison)
 "drb" = (
+/obj/effect/landmark/start/lawyer,
 /turf/open/floor/carpet,
 /area/lawoffice)
 "drd" = (
@@ -22414,6 +22432,13 @@
 /obj/effect/turf_decal/delivery,
 /turf/open/floor/plating,
 /area/maintenance/fore)
+"dwt" = (
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer1{
+	name = "air scrubber"
+	},
+/obj/effect/landmark/start/virologist,
+/turf/open/floor/plasteel/white,
+/area/medical/virology)
 "dwF" = (
 /obj/machinery/door/airlock/maintenance{
 	name = "Engineering Maintenance";
@@ -22582,6 +22607,8 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
+/obj/machinery/power/rad_collector,
+/obj/effect/turf_decal/bot,
 /turf/open/floor/plating,
 /area/engine/custom)
 "dyy" = (
@@ -33607,6 +33634,18 @@
 	},
 /turf/open/floor/plasteel,
 /area/hallway/primary/fore)
+"fne" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/firedoor,
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/obj/machinery/door/poddoor/preopen{
+	id = "bridge blast";
+	name = "bridge blast door"
+	},
+/turf/open/floor/plating,
+/area/bridge)
 "fnk" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer1{
 	dir = 8;
@@ -48170,6 +48209,10 @@
 	dir = 4;
 	name = "air supply pipe"
 	},
+/obj/machinery/door/poddoor/preopen{
+	id = "ceprivacy";
+	name = "privacy shutter"
+	},
 /turf/open/floor/plasteel/dark{
 	icon_state = "darkfull_whole_alt"
 	},
@@ -59181,8 +59224,16 @@
 /area/layenia/cloudlayer)
 "jaB" = (
 /obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/firedoor,
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/obj/machinery/door/poddoor/preopen{
+	id = "bridge blast";
+	name = "bridge blast door"
+	},
 /turf/open/floor/plating,
-/area/medical/medbay/zone2)
+/area/bridge)
 "jaF" = (
 /obj/effect/turf_decal/loading_area{
 	dir = 6;
@@ -74377,7 +74428,6 @@
 /turf/open/floor/plasteel,
 /area/crew_quarters/bar)
 "lpz" = (
-/obj/structure/grille,
 /obj/effect/spawner/structure/window/plasma,
 /turf/open/floor/plating,
 /area/engine/tether)
@@ -79458,7 +79508,6 @@
 /turf/open/floor/plating/asteroid/layenia,
 /area/layenia)
 "mey" = (
-/obj/item/ashtray,
 /obj/structure/chair/comfy/black{
 	dir = 4
 	},
@@ -79995,6 +80044,15 @@
 	pixel_y = 32
 	},
 /obj/structure/table,
+/obj/item/stack/rods/fifty{
+	pixel_x = -8;
+	pixel_y = 5
+	},
+/obj/item/stack/rods/fifty{
+	pixel_x = 7;
+	pixel_y = -4
+	},
+/obj/item/stack/rods/fifty,
 /turf/open/floor/plasteel,
 /area/engine/custom)
 "mjB" = (
@@ -81774,6 +81832,8 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
+/obj/machinery/power/rad_collector,
+/obj/effect/turf_decal/bot,
 /turf/open/floor/plating,
 /area/engine/custom)
 "mwm" = (
@@ -83672,6 +83732,9 @@
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable{
 	icon_state = "1-2"
+	},
+/obj/machinery/door/poddoor/preopen{
+	id = "hos"
 	},
 /turf/open/floor/plasteel/dark{
 	icon_state = "darkfull_whole_alt"
@@ -94151,6 +94214,10 @@
 	name = "scrubbers pipe"
 	},
 /obj/structure/disposalpipe/segment,
+/obj/machinery/door/poddoor/preopen{
+	id = "bridge blast";
+	name = "bridge blast door"
+	},
 /turf/open/floor/plasteel/dark{
 	icon_state = "darkfull_whole_alt"
 	},
@@ -103335,14 +103402,14 @@
 	dir = 4
 	},
 /obj/effect/turf_decal/tile/neutral,
-/obj/structure/disposalpipe/junction/flip{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer3{
 	name = "air supply pipe"
 	},
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer1{
 	name = "scrubbers pipe"
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 8
 	},
 /turf/open/floor/plasteel,
 /area/hallway/primary/fore/upper)
@@ -120786,8 +120853,11 @@
 	icon_state = "drain";
 	name = "drain"
 	},
-/obj/machinery/firealarm{
-	pixel_y = -28
+/obj/machinery/button/door{
+	desc = "A remote control switch for the medbay foyer.";
+	id = "cargoshut2";
+	name = "Mailroom Shutter Controls";
+	pixel_y = -22
 	},
 /turf/open/floor/plasteel{
 	icon_state = "floor_plate"
@@ -133732,9 +133802,6 @@
 	dir = 4
 	},
 /obj/effect/turf_decal/tile/neutral,
-/obj/structure/disposalpipe/junction/flip{
-	dir = 2
-	},
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer1{
 	dir = 8;
 	name = "scrubbers pipe"
@@ -133748,6 +133815,9 @@
 	},
 /obj/structure/cable{
 	icon_state = "2-4"
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 1
 	},
 /turf/open/floor/plasteel,
 /area/hallway/primary/fore/upper)
@@ -135978,6 +136048,10 @@
 /obj/machinery/door/airlock/command/glass{
 	name = "Chief Medical Officer";
 	req_access_txt = "40"
+	},
+/obj/machinery/door/poddoor/preopen{
+	id = "medshut2";
+	name = "shutters"
 	},
 /turf/open/floor/plasteel{
 	dir = 8;
@@ -144576,6 +144650,11 @@
 /obj/structure/flora/crystal/small/growth,
 /turf/open/floor/plating/asteroid/layenia/garden,
 /area/crew_quarters/dorms/upper)
+"uVJ" = (
+/obj/effect/turf_decal/bot,
+/obj/machinery/power/rad_collector,
+/turf/open/floor/plating,
+/area/engine/custom)
 "uVM" = (
 /obj/machinery/camera/motion{
 	c_tag = "MiniSat AI Chamber Observation";
@@ -166895,6 +166974,11 @@
 	icon_state = "floor_plate"
 	},
 /area/maintenance/fore/upper)
+"yaG" = (
+/obj/machinery/power/rad_collector,
+/obj/effect/turf_decal/bot,
+/turf/open/floor/plating,
+/area/engine/custom)
 "yaH" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 10
@@ -205798,7 +205882,7 @@ uSC
 uSC
 uSC
 bYX
-jaB
+ohl
 voR
 kCS
 kCS
@@ -211612,8 +211696,8 @@ oTY
 hIo
 rZe
 mwk
-hVd
-oTY
+yaG
+uVJ
 qwQ
 qwQ
 oTY
@@ -211869,8 +211953,8 @@ oTY
 oTY
 oTY
 dyp
-hVd
-rqF
+yaG
+yaG
 rqF
 anU
 jhb
@@ -264370,7 +264454,7 @@ gCx
 xep
 oFj
 jFa
-xzV
+aRT
 gah
 bMI
 loW
@@ -268252,7 +268336,7 @@ ecI
 jZa
 wsF
 teT
-wGF
+dwt
 vWw
 kVA
 eRT
@@ -274115,7 +274199,7 @@ sFV
 fjA
 sQm
 kDI
-tIS
+jaB
 cDJ
 pKx
 tIS
@@ -274629,7 +274713,7 @@ kLQ
 awu
 oUV
 kDI
-qWc
+fne
 oDt
 pUH
 qWc
