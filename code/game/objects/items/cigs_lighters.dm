@@ -744,6 +744,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	var/vapetime = FALSE //this so it won't puff out clouds every tick
 	var/screw = FALSE // kinky
 	var/super = FALSE //for the fattest vapes dude.
+	var/openable = TRUE
 
 /obj/item/clothing/mask/vape/suicide_act(mob/user)
 	user.visible_message("<span class='suicide'>[user] is puffin hard on dat vape, [user.p_they()] trying to join the vape life on a whole notha plane!</span>")//it doesn't give you cancer, it is cancer
@@ -762,22 +763,24 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 
 /obj/item/clothing/mask/vape/attackby(obj/item/O, mob/user, params)
 	if(O.tool_behaviour == TOOL_SCREWDRIVER)
-		if(!screw)
-			screw = TRUE
-			to_chat(user, "<span class='notice'>You open the cap on [src].</span>")
-			ENABLE_BITFIELD(reagents.reagents_holder_flags, OPENCONTAINER)
-			if(obj_flags & EMAGGED)
-				add_overlay("vapeopen_high")
-			else if(super)
-				add_overlay("vapeopen_med")
+		if(openable)
+			if(!screw)
+				screw = TRUE
+				to_chat(user, "<span class='notice'>You open the cap on [src].</span>")
+				ENABLE_BITFIELD(reagents.reagents_holder_flags, OPENCONTAINER)
+				if(obj_flags & EMAGGED)
+					add_overlay("vapeopen_high")
+				else if(super)
+					add_overlay("vapeopen_med")
+				else
+					add_overlay("vapeopen_low")
 			else
-				add_overlay("vapeopen_low")
+				screw = FALSE
+				to_chat(user, "<span class='notice'>You close the cap on [src].</span>")
+				DISABLE_BITFIELD(reagents.reagents_holder_flags, OPENCONTAINER)
+				cut_overlays()
 		else
-			screw = FALSE
-			to_chat(user, "<span class='notice'>You close the cap on [src].</span>")
-			DISABLE_BITFIELD(reagents.reagents_holder_flags, OPENCONTAINER)
-			cut_overlays()
-
+			to_chat(user, "<span class ='warning'>You can't seem to open [src]!</span>")
 	if(O.tool_behaviour == TOOL_MULTITOOL)
 		if(screw && !(obj_flags & EMAGGED))//also kinky
 			if(!super)

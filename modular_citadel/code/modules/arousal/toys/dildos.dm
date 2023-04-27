@@ -104,33 +104,33 @@
 	name 				= "knotted dildo"
 	attack_verb 		= list("penetrated", "knotted", "slapped", "inseminated")
 
-obj/item/dildo/human
+/obj/item/dildo/human
 	dildo_shape 		= "human"
 	name 				= "human dildo"
 	attack_verb         = list("penetrated", "slapped", "inseminated")
 
-obj/item/dildo/plain
+/obj/item/dildo/plain
 	dildo_shape 		= "plain"
 	name 				= "plain dildo"
 	attack_verb 		= list("penetrated", "slapped", "inseminated")
 
-obj/item/dildo/flared
+/obj/item/dildo/flared
 	dildo_shape 		= "flared"
 	name 				= "flared dildo"
 	attack_verb 		= list("penetrated", "slapped", "neighed", "gaped", "prolapsed", "inseminated")
 
-obj/item/dildo/flared/huge
+/obj/item/dildo/flared/huge
 	name 				= "literal horse cock"
 	desc 				= "THIS THING IS HUGE!"
 	dildo_size 			= 4
 
-obj/item/dildo/flared/gigantic
+/obj/item/dildo/flared/gigantic
 	name 				= "bitch breaker"
 	desc 				= "You can barely carry this thing! Meant for... \"advanced\" interrogation techniques."
 	dildo_size 			= 5
 	attack_verb 		= list("penetrated", "slapped", "gaped", "prolapsed", "inseminated", "destroyed", "broke", "demolished", "whacked")
 
-obj/item/dildo/custom
+/obj/item/dildo/custom
 	name 				= "customizable dildo"
 	desc 				= "Thanks to significant advances in synthetic nanomaterials, this dildo is capable of taking on many different forms to fit the user's preferences! Pricy!"
 	can_customize		= TRUE

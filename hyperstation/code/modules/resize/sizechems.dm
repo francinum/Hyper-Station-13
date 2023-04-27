@@ -43,7 +43,7 @@
 	taste_description = "a sharp, fiery and intoxicating flavour"
 	overdose_threshold = 10
 	metabolization_rate = 0.25
-	can_synth = FALSE //DO NOT MAKE THIS SNYTHESIZABLE, THESE CHEMS ARE SUPPOSED TO NOT BE USED COMMONLY
+	can_synth = TRUE //DO NOT MAKE THIS SNYTHESIZABLE, THESE CHEMS ARE SUPPOSED TO NOT BE USED COMMONLY //Fuck you I'm epic.
 
 //Growthchem reaction
 /datum/chemical_reaction/growthchem
@@ -92,7 +92,7 @@
 	taste_description = "a pungent, acidic and jittery flavour"
 	overdose_threshold = 10
 	metabolization_rate = 0.50
-	can_synth = FALSE //SAME STORY AS ABOVE
+	can_synth = TRUE //SAME STORY AS ABOVE
 
 //Shrinchem reaction
 /datum/chemical_reaction/shrinkchem
