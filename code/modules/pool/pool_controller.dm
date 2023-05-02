@@ -58,7 +58,7 @@
 	/// Just to prevent spam
 	var/draining = FALSE
 	/// Reagent blacklisting
-	var/respect_reagent_blacklist = TRUE
+	var/respect_reagent_blacklist = FALSE
 
 /obj/machinery/pool/controller/examine(mob/user)
 	. = ..()
@@ -150,7 +150,7 @@
 				var/list/reagent_names = list()
 				var/list/rejected = list()
 				for(var/datum/reagent/R in reagents.reagent_list)
-					if((R.volume >= min_reagent_amount) && (!respect_reagent_blacklist || R.can_synth))
+					if((R.volume >= min_reagent_amount) && (!respect_reagent_blacklist))
 						reagent_names += R.name
 					else
 						reagents.remove_reagent(R.type, INFINITY)

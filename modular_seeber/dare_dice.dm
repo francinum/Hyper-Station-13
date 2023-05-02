@@ -142,7 +142,7 @@
 /obj/item/clothing/mask/vape/cocktail/Initialize(mapload, param_color)
 	. = ..()
 	create_reagents(chem_volume, NO_REACT)
-	reagents.add_reagent_list(list(/datum/reagent/drug/anaphrodisiacplus = 20000, /datum/reagent/fermi/breast_enlarger = 20000, /datum/reagent/fermi/penis_enlarger = 20000, /datum/reagent/fermi/butt_enlarger = 20000, /datum/reagent/growthchem = 20000))
+	reagents.add_reagent_list(list(/datum/reagent/drug/aphrodisiacplus = 20000, /datum/reagent/fermi/breast_enlarger = 20000, /datum/reagent/fermi/penis_enlarger = 20000, /datum/reagent/fermi/butt_enlarger = 20000, /datum/reagent/growthchem = 20000))
 
 ///PERSONAL VAPES///
 ///Custom personal use vapes. 
@@ -170,7 +170,7 @@
 /obj/item/clothing/mask/vape/evie/Initialize(mapload, param_color)
 	. = ..()
 	create_reagents(chem_volume, NO_REACT)
-	reagents.add_reagent_list(list(/datum/reagent/drug/anaphrodisiacplus = 33333.33, /datum/reagent/fermi/penis_enlarger = 33333.33, /datum/reagent/growthchem = 33333.33))
+	reagents.add_reagent_list(list(/datum/reagent/drug/aphrodisiacplus = 33333.33, /datum/reagent/fermi/penis_enlarger = 33333.33, /datum/reagent/growthchem = 33333.33))
 
 /obj/item/clothing/mask/vape/isthel
 	name = "\improper Isthel's E-Cigarette"
@@ -196,7 +196,7 @@
 /obj/item/clothing/mask/vape/jakki/Initialize(mapload, param_color)
 	. = ..()
 	create_reagents(chem_volume, NO_REACT)
-	reagents.add_reagent_list(list(/datum/reagent/drug/anaphrodisiacplus = 100000))
+	reagents.add_reagent_list(list(/datum/reagent/drug/aphrodisiacplus = 100000))
 
 ///DARE-BAGS///
 ///These are just custom BOH bags that hold a near-infinite amount and come with some pre-filled goodies.
