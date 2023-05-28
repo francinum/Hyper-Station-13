@@ -9,7 +9,7 @@ var/datum/lore/atc_controller/atc = new/datum/lore/atc_controller
 	var/next_message					//When the next message should happen in world.time
 	var/force_chatter_type				//Force a specific type of messages
 
-	var/squelched = 0					//If ATC is squelched currently
+	var/squelched = 1					//If ATC is squelched currently //FUCK OFF AND DON'T COME BACK
 
 /datum/lore/atc_controller/New(msg)
 	spawn(30 SECONDS) //Lots of lag at the start of a shift.
