@@ -546,20 +546,22 @@
 
 	to_chat(R,struggle_user_message)
 
-	if(escapable) //If the stomach has escapable enabled.
-		if(prob(escapechance)) //Let's have it check to see if the prey escapes first.
-			to_chat(R,"<span class='warning'>You start to climb out of \the [lowertext(name)].</span>")
-			to_chat(owner,"<span class='warning'>Someone is attempting to climb out of your [lowertext(name)]!</span>")
-			if(do_after(R, escapetime))
-				if((owner.stat || escapable) && (R.loc == src)) //Can still escape?
-					release_specific_contents(R)
-					return
-				else if(R.loc != src) //Aren't even in the belly. Quietly fail.
-					return
-				else //Belly became inescapable or mob revived
-					to_chat(R,"<span class='warning'>Your attempt to escape [lowertext(name)] has failed!</span>")
-					to_chat(owner,"<span class='notice'>The attempt to escape from your [lowertext(name)] has failed!</span>")
-					return
+	if(!escapable) //If the stomach has INTERACTIONS disabled, Return immediately.
+		return // The name of this toggle sucks, it's actually about the entire interaction system. This was turned into a guard clause to allow the other chances to ACTUALLY WORK!
+	
+	if(prob(escapechance)) //Let's have it check to see if the prey escapes first.
+		to_chat(R,"<span class='warning'>You start to climb out of \the [lowertext(name)].</span>")
+		to_chat(owner,"<span class='warning'>Someone is attempting to climb out of your [lowertext(name)]!</span>")
+		if(do_after(R, escapetime))
+			if((owner.stat || escapable) && (R.loc == src)) //Can still escape?
+				release_specific_contents(R)
+				return
+			else if(R.loc != src) //Aren't even in the belly. Quietly fail.
+				return
+			else //Belly became inescapable or mob revived
+				to_chat(R,"<span class='warning'>Your attempt to escape [lowertext(name)] has failed!</span>")
+				to_chat(owner,"<span class='notice'>The attempt to escape from your [lowertext(name)] has failed!</span>")
+				return
 	else if(prob(transferchance) && transferlocation) //Next, let's have it see if they end up getting into an even bigger mess then when they started.
 		var/obj/belly/dest_belly
 		for(var/belly in owner.vore_organs)
